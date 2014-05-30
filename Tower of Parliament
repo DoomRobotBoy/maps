@@ -1,0 +1,119 @@
+     <map proto="1.3.2">
+      <name>Tower of Parliament</name>
+      <version>1.1</version>
+	  <objective> Destroy enemies' core. </objective>
+    <!-- Thanks for putting me with the authors Guicotsch! -->
+      <authors>
+       <author contribution="Map designer + Feedback">Guicotsch</author>
+       <author contribution="Map designer">bl0up</author>
+       <author contribution="XML coder">jonasnina</author>
+      </authors>
+
+	  <include src="tutorial.xml"/>
+    
+      <teams>
+       <team color="black" max="16" max-overfill="24" overhead-color="black">Black Team</team>
+       <team color="white" max="16" max-overfill="24" overhead-color="white">White Team</team>
+      </teams>
+    <!-- The main kit for all players -->
+          <kits>
+           <kit name="spawn" force="true">
+            <item slot="0">stone sword </item>
+            <item slot="1">bow </item>
+            <item slot="2">diamond pickaxe</item>
+            <item slot="3" name="`6Croissant`r" amount="32">bread</item>
+            <item slot="4" amount="64">cobblestone </item>
+            <item slot="5" amount="16">glass</item>
+            <item slot="6"> </item>
+            <item slot="7"> </item>
+            <item slot="8" name="`6Straw`r" amount="32">wheat</item>
+            <item slot="28" amount="64">arrow </item>
+            <potion duration="4" amplifier="4">DAMAGE_RESISTANCE</potion>
+            <potion duration="oo" amplifier="1">SLOW</potion>
+           </kit>
+        <!-- colored white armor -->
+           <kit name="whitekit" parents="spawn">
+                            <helmet>iron helmet</helmet>
+                            <leggings>gold leggings</leggings>
+                            <boots color="FFFFFF">leather boots</boots>
+                           
+           </kit>
+        <!-- colored black armor -->
+           <kit name="blackkit" parents="spawn">
+                                    <helmet>iron helmet</helmet>
+                            <leggings>gold leggings</leggings>
+                            <boots color="191919">leather boots</boots>
+           </kit>
+          </kits>
+     
+      <itemremove>
+       <item>arrow</item>
+       <item>glass</item>
+      </itemremove>
+      <spawns>
+       <spawn team="black" kit="blackkit" yaw="0">
+        <cuboid min="-282,24,-206" max="-283,24,-207"/>
+       </spawn>
+       <spawn team="white" kit="whitekit" yaw="180">
+        <cuboid min="-305,24,-333" max="-302,24,-330"/>
+       </spawn>
+       <default yaw="-90">
+        <cuboid min="-275,51,-270" max="-274,51,-269"/>
+       </default>
+      </spawns>
+      <cores material="obsidian" leak="6" mode-changes="true">
+       <core team="black"><cuboid min="-295,48,-220" max="-291,52,-215"/></core>
+       <core team="white"><cuboid min="-295,48,-319" max="-291,52,-323"/></core>
+      </cores>
+      <modes>
+       <mode after="20m" material="coal block" name="The `0`lCores`r have weakened!"/>
+      </modes>
+      <mobs>
+        <filter>
+            <allow>
+                <!-- Only allow horses to be spawned with spawn eggs -->
+                <mob>horse</mob>
+                <spawn>spawner_egg</spawn>
+                <mob>spider</mob>
+                <spawn>spawner</spawn>            
+            </allow>
+        </filter>
+      </mobs>
+      <filters>
+     
+    <!-- Spawn Protection -->
+       <filter name="deny-white" parents="deny-players">
+        <allow><team>black</team></allow>
+       </filter>
+       <filter name="deny-black" parents="deny-players">
+        <allow><team>white</team></allow>
+       </filter>
+      </filters>
+      <regions>
+    <!-- Void protection -->
+       <apply block="deny-all" message="The `2kraken`r is consuming your blocks!">
+        <negative>
+         <rectangle name="playing-field" min="-311,-203" max="-275,-335"/>
+        </negative>
+       </apply>
+    <!-- Allow tnt projectiles damaging the middle but not the towers -->
+       <apply block-break="deny-world">
+         <negative><rectangle min="-311,-301" max="-275,-235"/></negative>
+       </apply>
+    <!-- Black spawn -->
+       <apply enter="deny-white" message="You shall not enter the other team's base">
+        <cuboid name="black-house" min="-278,24,-211" max="-285,30,-202"/>
+       </apply>
+       <apply block="deny-all" Message="This house is `nperfect`r as it looks, `4stop modifying`r!">
+        <region name="black-house"/>
+       </apply>
+    <!-- White spawn -->
+       <apply enter="deny-black" message="You shall not enter the other team's base">
+        <cuboid name="white-house" min="-309,24,-326" max="-299,30,-336"/>
+       </apply>
+       <apply block="deny-all" Message="This house is `nperfect` as it looks, `4stop modifying`r!">
+        <region name="white-house"/>
+       </apply>
+      </regions>
+    </map>
+
