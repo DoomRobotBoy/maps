@@ -22,6 +22,26 @@
 
     </spawn>
   </spawns>
+  
+  <kit name="spawn">
+    <item slot="0">STONE SWORD</item>
+    <item slot="1">bow</item>
+    <item slot="2">iron pickaxe</item>
+    <item slot="3">wood axe</item>
+    <item slot="4">shears</item>
+    <item slot="5" amount="4">tnt</item>
+    <item slot="28" amount="12">arrow</item>
+    <potion duration="5" amplifier="5">heal</potion>
+    <potion duration="99999">SATURATION</potion>
+  </kit>
+  
+  <kit name="red" parents="spawn">
+    
+    <item slot="6" amount="64"damage="14">wool</item>
+    <item slot="33" amount="64"damage="14">wool</item>
+    <item slot="24" amount="64"damage="14">wool</item>
+    
+  </kit>
 
 
 
