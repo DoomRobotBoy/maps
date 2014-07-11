@@ -71,7 +71,12 @@
   </tnt>
 
 
-
+  <toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>iron axe</tool>
+    <tool>shears</tool>
+  </toolrepair>
   
   
 </map>
