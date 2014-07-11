@@ -23,6 +23,11 @@
     </spawn>
   </spawns>
   
+  
+  <kits>
+  
+  
+  
   <kit name="spawn">
     <item slot="0">STONE SWORD</item>
     <item slot="1">bow</item>
@@ -40,8 +45,30 @@
     <item slot="6" amount="64"damage="14">wool</item>
     <item slot="33" amount="64"damage="14">wool</item>
     <item slot="24" amount="64"damage="14">wool</item>
+    <helmet color="800000" damage="-3000">leather helmet</helmet>
+    <chestplate color="800000" damage="-3000">leather chestplate</chestplate>
+    <leggings color="800000" damage="-3000">leather leggings</leggings>
+    <boots color="800000" damage="-3000">leather boots</boots>
     
   </kit>
+  
+  <kit name="red" parents="spawn">
+    
+    <item slot="6" amount="64"damage="11">wool</item>
+    <item slot="33" amount="64"damage="11">wool</item>
+    <item slot="24" amount="64"damage="11">wool</item>
+    <helmet color="3c476e" damage="-3000">leather helmet</helmet>
+    <chestplate color="3c476e" damage="-3000">leather chestplate</chestplate>
+    <leggings color="3c476e" damage="-3000">leather leggings</leggings>
+    <boots color="3c476e" damage="-3000">leather boots</boots>
+    
+  </kit>
+  
+  </kits>
+  
+  <tnt>
+    <instantignite>on</autoignite>
+  </tnt>
 
 
 
