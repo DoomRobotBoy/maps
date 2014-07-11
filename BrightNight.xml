@@ -1,2 +1,30 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
+  
+  <name>Bright Night</name>
+  <version>1.0</version>
+  <objective>Destroy 80% of ennemies' Tower!</objective>
+  
+  <authors>
+    <author>Guicotsch</author>
+  </authors>
+  
+  
+  <rule>Don't try to explode your mates.</rule>
+  
+  <teams>
+    <team color="red" max="16" max-overfill="20"></team>
+    <team color="blue" max="16" max-overfill="20"></team>
+  </teams>
+  
+  <spawns>
+    <spawn team="red" safe="true" yaw="0">
+
+    </spawn>
+  </spawns>
+
+
+
+  
+  
+</map>
