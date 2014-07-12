@@ -17,13 +17,19 @@
     <team color="blue" max="16" max-overfill="20"></team>
   </teams>
   
+<!-- spawns -->
   <spawns>
-    <spawn team="red" safe="true" yaw="0">
-
+    <spawn team="red" safe="true" yaw="0" kit="red">
+      <cuboid min="-12,65,-73" max="-20,120,-67" />
     </spawn>
+    
+    <spawn team="blue" safe="true" yaw="0" kit="red">
+      <cuboid min="-19,65,-9" max="-11,121,-15" />
+    </spawn>
+    
   </spawns>
   
-  
+ <!-- end of spawns --> 
   <kits>
   
   
@@ -68,7 +74,12 @@
   
   <tnt>
     <instantignite>on</autoignite>
+    <yield>0</yield>
   </tnt>
+  
+  <killreward>
+    <item amount="1">tnt</item>
+</killreward>
 
 
   <toolrepair>
@@ -77,6 +88,41 @@
     <tool>iron axe</tool>
     <tool>shears</tool>
   </toolrepair>
+  
+  <itemremove>
+    <item>wool</item>
+  </itemremove>
+  
+  <timelock>on</timelock>
+  
+  <maxbuildheight>125</maxbuildheight>
+  <difficulty>1</difficulty>
+  
+  <autorespawn time="3s"/>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Monuments -->
+  
+  <destroyables name="Tower" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;stone brick:2;stone brick:1" completion="80%">
+  
+    <destroyable owner="red">
+      <cuboid min="-9,59,-63" max="-23,122,-79" />
+    </destroyable>
+    
+    <destroyable owner="blue">
+      <cuboid min="-9,58,-19" max="-24,121,-3" />
+    </destroyable>
+    
+  </destroyables>
+  
+  <!-- End of monuments -->
+  
   
   
 </map>
