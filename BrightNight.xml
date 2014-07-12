@@ -73,7 +73,7 @@
   </kits>
   
   <tnt>
-    <instantignite>on</autoignite>
+    <instantignite>on</instantignite>
     <yield>0</yield>
   </tnt>
   
