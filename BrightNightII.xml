@@ -59,6 +59,8 @@
       <item slot="35" amount="8">sand</item>
       <item slot="26" amount="3">dispenser</item>
       <item slot="17" amount="8">redstone comparator</item>
+      <potion duration="8" amplifier="5">heal</potion>
+      <potion duration="99999">SATURATION</potion>
       <knockback-reduction>0.5</knockback-reduction>
     </kit>
     
@@ -121,7 +123,34 @@
       
   </itemremove>
   
+  <tnt>
+    <blockdamage>true</blockdamage>
+    <instantignite>false</instantignite>
+    
+  </tnt>
   
+  <timelock>on</timelock>
+  <maxbuildheight>85</maxbuildheight>
+  
+  
+  <!-- portals -->
+  
+  
+  
+  <!-- end of portals -->
+
+
+  <!-- monument -->
+  <destroyables name="Towers" completion="75%" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;stone brick:2;stone brick:1">
+    <destroyable owner="blue">
+      <cuboid min="-26,15,-89" max="38,84,-71" />
+    </destroyable>
+    <destroyable owner="red">
+      <cuboid min="40,18,-136" max="-27,85,-152" />
+    </destroyable>
+  </destroyables>
+  
+  <!-- end of monuments -->
   
   
   
