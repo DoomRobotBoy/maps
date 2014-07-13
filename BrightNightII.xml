@@ -7,8 +7,122 @@
   
   <author>Guicotsch</author>
   
+  <contributors>
+    <contributor contribution="Hosting me on his server">jollee999</contributor>
+  </contributors>
+  
+  
+  <!-- Spawns -->
   <spawns>
+  
+    <default yaw="90">
+      <cuboid min="42,90,-112" max="41,90,-109" />
+    </default>
+    
+    <spawn team="red" safe="true" kit="red" yaw="0">
+      <cuboid min="-3,106,-187" max="9,106,186" />
+    </spawn>
+    
+    <spawn team="blue" safe="true" kit="blue" yaw="180">
+      <cuboid min="13,106,-37" max="1,106,-38" />
+    </spawn>
     
   </spawns>
+  
+  <!-- Kits -->
+  
+  <kits>
+    <!-- thanks whoever made the tnt inventory on earth! thanks a lot -->
+    <!-- tnt kit -->
+    <kit name="tnt-inventory" force="true">
+      <item slot="0" damage="-3000" attributes="generic.attackDamage:add:7">diamond pickaxe</item>
+      <item slot="27" damage="-3000" name="`6TNT Defuser" lore="`7Right click to defuse team griefer's TNT|`7Does not work in `9water`7.|`7Use `a/report `7to alert the staff!">shears</item>
+      <item slot="9" amount="64">tnt</item><item slot="1" damage="-3000" enchantment="arrow infinite:1">bow</item>
+      <item slot="28">arrow</item><item slot="10" amount="64">tnt</item>
+      <item slot="2" amount="64">vine</item>
+      <item slot="29" damage="-3000" attributes="generic.attackDamage:add:1" name="`aiCarus Blade" lore="`7Right click to reduce TNT damage">wood sword</item>
+      <item slot="11" amount="64">tnt</item><item slot="4" amount="64">nether fence</item>
+      <item slot="31" amount="64">step</item><item slot="22" amount="16">ladder</item>
+      <item slot="5" amount="16">stone button</item>
+      <item slot="32" amount="8">stone plate</item>
+      <item slot="23" amount="16">lever</item>
+      <item slot="14" amount="16">trap door</item>
+      <item slot="6">water bucket</item>
+      <item slot="33">water bucket</item>
+      <item slot="24">water bucket</item>
+      <item slot="15" amount="16">piston base</item>
+      <item slot="7" amount="8">redstone block</item>
+      <item slot="34" amount="64">redstone</item>
+      <item slot="25" amount="16">redstone torch on</item>
+      <item slot="16" amount="16">diode</item>
+      <item slot="8" amount="64">tnt</item>
+      <item slot="35" amount="8">sand</item>
+      <item slot="26" amount="3">dispenser</item>
+      <item slot="17" amount="8">redstone comparator</item>
+      <knockback-reduction>0.5</knockback-reduction>
+    </kit>
+    
+    <kit name="red" parents="tnt-inventory" force="true">
+      <helmet color="800000" damage="-3000">leather helmet</helmet>
+      <chestplate damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5">iron chestplate</chestplate>
+      <boots color="800000" damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5;PROTECTION_FALL:1"></boots>
+      
+    </kit>
+    
+    <kit name="blue" parents="tnt-inventory" force="true">
+      <helmet color="3c476e" damage="-3000">leather helmet</helmet>
+      <chestplate damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5">iron chestplate</chestplate>
+      <boots color="3c476e" damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5;PROTECTION_FALL:1"></boots>
+      
+    </kit>
+    
+  </kits>
+  
+  
+  <toolrepair>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>dispenser</tool>
+  </toolrepair>
+  
+  <itemremove>
+    <item>workbench</item>
+    <item>shears</item>
+    <item>wood sword</item>
+    <item>arrow</item>
+    <item>vine</item>
+    <item>stained clay</item>
+    <item>stained glass</item>
+    <item>nether fence</item>
+    <item>step</item>
+    <item>ladder</item>
+    <item>trap door</item>
+    <item>stone plate</item>
+    <item>piston base</item>
+    <item>redstone block</item>
+    <item>redstone</item>
+    <item>stone button</item>
+    <item>lever</item>
+    <item>redstone torch on</item>
+    <item>diode</item><item>water bucket</item>
+    <item>bucket</item><item>tnt</item>
+    <item>leather helmet</item>
+    <item>diamond chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>bucket</item>
+    <item>diamond block</item>
+    <item>iron block</item>
+    <item>iron ingot</item>
+    <item>hopper</item>
+    <item>redstone comparator</item>
+    <item>sand</item>
+
+      
+  </itemremove>
+  
+  
+  
+  
   
 </map>
