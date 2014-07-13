@@ -1,1 +1,14 @@
 <?xml version="1.0"?>
+<map proto="1.3.3">
+
+
+  <version>1.0</version>
+  <objective>Be the first to detroy 75% of ennemies' base.</objective>
+  
+  <author>Guicotsch</author>
+  
+  <spawns>
+    
+  </spawns>
+  
+</map>
