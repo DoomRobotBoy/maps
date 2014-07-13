@@ -58,7 +58,7 @@
     
   </kit>
   
-  <kit name="red" parents="spawn">
+  <kit name="blue" parents="spawn">
     
     <item slot="6" amount="64" damage="11">wool</item>
     <item slot="33" amount="64" damage="11">wool</item>
