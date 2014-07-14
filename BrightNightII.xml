@@ -11,6 +11,9 @@
     <contributor contribution="Hosting me on his server">jollee999</contributor>
   </contributors>
   
+
+  
+  
   
   <!-- Spawns -->
   <spawns>
@@ -138,7 +141,7 @@
   <portals>
     
     <portal x="-17" y="-69" z="-39" filter="allow-players" yaw="180">
-      <cuboid min="1,109,-41" max="1,107,-41" />
+      <cuboid min="1,109,-42" max="1,107,-42" />
     </portal>
     
   </portals>
