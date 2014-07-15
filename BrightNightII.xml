@@ -1,44 +1,39 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
-
-
+  <name>Bright Night II</name>
   <version>1.0</version>
-  <objective>Be the first to detroy 75% of ennemies' base.</objective>
-  
+  <objective>Be the first to destroy 75% of enemy's base.</objective>
+<authors>  
   <author>Guicotsch</author>
-  
+</authors>
   <contributors>
-    <contributor contribution="Hosting me on his server">jollee999</contributor>
+    <contributor contribution="Server hosting">jollee999</contributor>
   </contributors>
-  
-
-  
-  
-  
+  <rules>
+	<rule>Do not block the spawn portals!</rule>
+  </rules>
+  <teams>
+   <team color="dark red" max="25" max-overfill="30">Red Team</team>
+   <team color="blue" max="25" max-overfill="30">Blue Team</team>
+</teams>
   <!-- Spawns -->
   <spawns>
-  
-    <default yaw="90">
-      <cuboid min="42,90,-112" max="41,90,-109" />
+    <default yaw="-90">
+      <cuboid min="42,91,-112" max="41,91,-109" />
     </default>
     
     <spawn team="red" safe="true" kit="red" yaw="0">
-      <cuboid min="-3,106,-187" max="9,106,186" />
+      <cuboid min="8,107,-186" max="-2,107,-185"/>
     </spawn>
     
     <spawn team="blue" safe="true" kit="blue" yaw="180">
-      <cuboid min="13,106,-37" max="1,106,-38" />
+      <cuboid min="13,107,-37" max="1,107,-38"/>
     </spawn>
-    
   </spawns>
-  
   <!-- Kits -->
-  
   <kits>
-    <!-- thanks whoever made the tnt inventory on earth! thanks a lot -->
-    <!-- tnt kit -->
     <kit name="tnt-inventory" force="true">
-      <item slot="0" damage="-3000" attributes="generic.attackDamage:add:7">diamond pickaxe</item>
+      <item slot="0" damage="-3000" attributes="generic.attackDamage:add:7" name="Sharpened Diamond Pickaxe">diamond pickaxe</item>
       <item slot="27" damage="-3000" name="`6TNT Defuser" lore="`7Right click to defuse team griefer's TNT|`7Does not work in `9water`7.|`7Use `a/report `7to alert the staff!">shears</item>
       <item slot="9" amount="64">tnt</item><item slot="1" damage="-3000" enchantment="arrow infinite:1">bow</item>
       <item slot="28">arrow</item><item slot="10" amount="64">tnt</item>
@@ -62,27 +57,32 @@
       <item slot="35" amount="8">sand</item>
       <item slot="26" amount="3">dispenser</item>
       <item slot="17" amount="8">redstone comparator</item>
-      <potion duration="8" amplifier="5">heal</potion>
-      <potion duration="99999">SATURATION</potion>
       <knockback-reduction>0.5</knockback-reduction>
     </kit>
     
     <kit name="red" parents="tnt-inventory" force="true">
       <helmet color="800000" damage="-3000">leather helmet</helmet>
-      <chestplate damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5">iron chestplate</chestplate>
-      <boots color="800000" damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5;PROTECTION_FALL:1"></boots>
-      
+      <chestplate damage="-3000" enchantment="protection explosions:5">iron chestplate</chestplate>
+      <boots color="800000" damage="-3000" enchantment="protection explosions:5;protection fall:1">leather boots</boots>
+	  <item damage="14" amount="64" slot="3">wool</item>
+	  <item damage="14" amount="64" slot="30">wool</item>
+	  <item damage="14" amount="64" slot="21">wool</item>
+	  <item damage="14" amount="64" slot="12">wool</item>
     </kit>
     
     <kit name="blue" parents="tnt-inventory" force="true">
       <helmet color="3c476e" damage="-3000">leather helmet</helmet>
-      <chestplate damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5">iron chestplate</chestplate>
-      <boots color="3c476e" damage="-3000" enchantments="PROTECTION_EXPLOSIONS:5;PROTECTION_FALL:1"></boots>
-      
+      <chestplate damage="-3000" enchantment="protection explosions:5">iron chestplate</chestplate>
+      <boots color="3c476e" damage="-3000" enchantment="protection explosions:5;protection fall:1">leather boots</boots>
+	  <item damage="11" amount="64" slot="3">wool</item>
+	  <item damage="11" amount="64" slot="30">wool</item>
+	  <item damage="11" amount="64" slot="21">wool</item>
+	  <item damage="11" amount="64" slot="12">wool</item>
     </kit>
-    
+    <kit name="resistance">
+		<potion duration="8" amplifier="5">damage resistance</potion>
+	</kit>
   </kits>
-  
   
   <toolrepair>
     <tool>bow</tool>
@@ -109,8 +109,10 @@
     <item>stone button</item>
     <item>lever</item>
     <item>redstone torch on</item>
-    <item>diode</item><item>water bucket</item>
-    <item>bucket</item><item>tnt</item>
+    <item>diode</item>
+	<item>water bucket</item>
+    <item>bucket</item>
+	<item>tnt</item>
     <item>leather helmet</item>
     <item>diamond chestplate</item>
     <item>leather leggings</item>
@@ -121,47 +123,142 @@
     <item>iron ingot</item>
     <item>hopper</item>
     <item>redstone comparator</item>
-    <item>sand</item>
-
-      
+	<item>iron chestplate</item>
+    <item>sand</item> 
+	<item>wool:14</item>
+	<item>wool:11</item>
   </itemremove>
   
   <tnt>
     <blockdamage>true</blockdamage>
     <instantignite>false</instantignite>
-    
   </tnt>
   
   <timelock>on</timelock>
   <maxbuildheight>85</maxbuildheight>
   
-  
-  <!-- portals -->
-  
+	<filters>
+		<filter name="only-blue">
+			<team>blue</team>
+		</filter>
+		<filter name="only-red">
+			<team>red</team>
+		</filter>
+	</filters>
+	<regions>
+		<cuboid name="building" min="oo,85,oo" max="-oo,255,-oo"/>
+		<rectangle name="blue" min="-24,-74" max="32,-93"/>
+		<rectangle name="red" min="-22,-131" max="34,-150"/>
+		<apply block="deny-world">
+			<union name="Portals">
+				<cuboid min="-14,71,-81" max="-19,75,-77"/>
+				<cuboid min="27,71,-81" max="23,75,-77"/>
+				<cuboid min="24,46,-81" max="28,50,-77"/>
+				<cuboid min="-14,46,-81" max="-19,50,-77"/>
+				<cuboid min="-16,71,-143" max="-13,75,-147"/>
+				<cuboid min="30,75,-141" max="26,71,-146"/>
+				<cuboid min="25,46,-141" max="29,50,-146"/>
+				<cuboid min="-17,46,-143" max="-11,50,-147"/>
+			</union>
+		</apply>
+		<apply block-place="deny-blocks" message="You cannot bridge on this map! Use cannons instead.">
+			<negative><region name="blue"/><region name="red"/></negative>
+		</apply>
+		<apply block-break="deny-blocks" message="You may not destroy blocks here.">
+			<region name="building"/>
+		</apply>
+		<apply kit="resistance">
+			<union>
+				  <cuboid min="2,109,-41" max="1,107,-40"/>
+				  <cuboid min="4,109,-41" max="6,107,-40"/>
+				  <cuboid min="8,109,-41" max="10,107,-40"/>
+				  <cuboid min="12,109,-41" max="14,107,-40"/>
+				  <cuboid min="10,107,-183" max="8,108,-182"/>
+				  <cuboid min="6,107,-183" max="4,108,-182"/>
+				  <cuboid min="2,107,-183" max="0,108,-182"/>
+				  <cuboid min="-2,107,-183" max="-4,108,-182"/>
+			</union>
+		</apply>
+	</regions>
   <portals>
-    
-    <portal x="-17" y="-69" z="-39" filter="allow-players" yaw="180">
-      <cuboid min="1,109,-42" max="1,107,-42" />
+      <!-- Blue team's portals to the map -->
+    <portal x="@-16" y="@47" z="@-81" yaw="@180" protect="true" filter="only-blue"> <!-- Bottom Left -->
+      <cuboid min="2,109,-41" max="1,107,-40"/>
     </portal>
-    
+    <portal x="@26" y="@47" z="@-81" yaw="@180" protect="true" filter="only-blue"> <!-- Bottom Right -->
+		<cuboid min="4,109,-41" max="6,107,-40"/>
+	</portal>
+	<portal x="@-17" y="@72" z="@-81" yaw="@180" protect="true" filter="only-blue"> <!-- Top Left -->
+		<cuboid min="8,109,-41" max="10,107,-40"/>
+	</portal>
+	<portal x="@25" y="@72" z="@-81" yaw="@180" protect="true" filter="only-blue"> <!-- Top Right -->
+		<cuboid min="12,109,-41" max="14,107,-40"/>
+	</portal>
+	  <!-- Blue team's portals back to spawn -->
+	<portal x="@8" y="@107" z="@-37" yaw="@180" protect="true" filter="only-blue"> <!-- Top Left -->
+		<cuboid min="-15,72,-80" max="-17,73,-77"/>
+	</portal>
+	<portal x="@8" y="@107" z="@-37" yaw="@180" protect="true" filter="only-blue"> <!-- Top Right -->
+		<cuboid min="26,72,-79" max="23,73,-77"/>
+	</portal>
+	<portal x="@8" y="@107" z="@-37" yaw="@180" protect="true" filter="only-blue"> <!-- Bottom Right -->
+		<cuboid min="27,47,-79" max="24,48,-77"/>
+	</portal>
+	<portal x="@8" y="@107" z="@-37" yaw="@180" protect="true" filter="only-blue"> <!-- Bottom Left -->
+		<cuboid min="-15,47,-80" max="-18,48,-77"/>
+	</portal>
+	  <!-- Red team's portals to the map -->
+	 <portal x="@27" y="@47" z="@-141" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="10,107,-183" max="8,108,-182"/>
+	 </portal>
+	 <portal x="@-15" y="@47" z="@-142" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="6,107,-183" max="4,108,-182"/>
+	 </portal>
+	 <portal x="@28" y="@72" z="@-141" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="2,107,-183" max="0,108,-182"/>
+	 </portal>
+	 <portal x="@-14" y="@72" z="@-142" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="-2,107,-183" max="-4,108,-182"/>
+	 </portal>
+	  <!-- Red team's portals back to spawn -->
+	 <portal x="@2" y="@107" z="@-185" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="-16,72,-144" max="-13,74,-146"/>
+	 </portal>
+	 <portal x="@2" y="@107" z="@-185" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="29,74,-143" max="26,72,-145"/>
+	 </portal>
+	 <portal x="@2" y="@107" z="@-185" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="25,47,-143" max="28,49,-144"/>
+	 </portal>
+	 <portal x="@2" y="@107" z="@-185" yaw="@0" protect="true" filter="only-red">
+		<cuboid min="-17,47,-144" max="-14,49,-146"/>
+	 </portal>
   </portals>
-  <!-- testing portals -->
-  
-  <!-- end of portals -->
-
-
-  <!-- monument -->
-  <destroyables name="Towers" completion="75%" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;stone brick:2;stone brick:1">
+	<disabledamage>
+		<damage>fall</damage>
+	</disabledamage>
+	<hunger>
+		<depletion>off</depletion>
+	</hunger>
+  <!-- Monument -->
+  <destroyables>
+  <destroyables name="Towers" completion="75%" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;smooth brick:2;smooth brick:1;smooth brick:0" show-progress="true">
     <destroyable owner="blue">
       <cuboid min="-26,15,-89" max="38,84,-71" />
     </destroyable>
     <destroyable owner="red">
       <cuboid min="40,18,-136" max="-27,85,-152" />
     </destroyable>
-  </destroyables>
-  
-  <!-- end of monuments -->
-  
-  
-  
+
+	</destroyables>
+	<destroyables name="Placeholder" completion="0%" mode-changes="true" show="false" materials="air">
+		<destroyable owner="blue">
+			<block>0,0,0</block>
+		</destroyable>
+	</destroyables>
+	</destroyables>
+	<modes>
+		<mode after="5s" material="air" name="`c`lNote: `fYou may not bridge on this map! Use cannons instead."/>
+		<mode after="6s" material="air" name="`a`oYou have a sword for icarusing in your inventory."/>
+	</modes>
 </map>
