@@ -8,6 +8,7 @@
 </authors>
   <contributors>
     <contributor contribution="Server hosting">jollee999</contributor>
+    <contributor contribution="XML coding">TheZaner</contributor>
   </contributors>
   <rules>
 	<rule>Do not block the spawn portals!</rule>
