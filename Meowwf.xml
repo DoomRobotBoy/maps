@@ -70,6 +70,25 @@
     <broadcastLives>true</broadcastLives>
   </blitz>
   
+  
+  <mob-disguises>
+    <disguise type="wolf">
+      <filter>
+      <team>Dalmatians</team>
+      </filter>
+    </disguise>
+  </mob-disguises>
+  
+  <mob-disguises>
+  <disguise type="ocelot">
+    <filter>
+      <team>Aristocats</team>
+    </filter>
+    </disguise>
+  </mob-disguises>
+
+
+  
   <include src="blitz-global.xml"/>
   
   
