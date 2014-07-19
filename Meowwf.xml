@@ -10,8 +10,8 @@
     <contributor contribution="XML Edits">Kyuhl</contributor>    
 </contributors>
 <teams>
-    <team color="b" max="10" max-overfill="13" overhead-color="b" respawn-limit="3">Dalmatians</team>
-    <team color="c" max="10" max-overfill="13" overhead-color="b" respawn-limit="3">Aristocats</team>
+    <team color="aqua" max="10" max-overfill="13" overhead-color="aqua" respawn-limit="3">Dalmatians</team>
+    <team color="red" max="10" max-overfill="13" overhead-color="red" respawn-limit="3">Aristocats</team>
 </teams>
 <rules>
     <rule>Don't even try to spawnkill</rule>
@@ -21,15 +21,15 @@
         <chestplate enchantment="PROTECTION_ENVIRONMENTAL:3">diamond chestplate</chestplate>
         <potion duration="3" potion-particles="false" amplifier="3">heal</potion>
         <potion duration="3" potion-particles="false" amplifier="2">INCREASE_DAMAGE</potion>
-        <potion duration="99999" potion-particles="false">SATURATION</potion>
+        <potion duration="oo" potion-particles="false">SATURATION</potion>
     </kit>
     <kit name="Dalmatians" parents="spawn">
         <item slot="0" enchantment="DAMAGE_ALL:1">bone</item>
-        <potion duration="99999" amplifier="1">speed</potion>
+        <potion duration="oo" amplifier="1">speed</potion>
     </kit>
     <kit name="Aristocats" parents="spawn">
         <item slot="0" enchantment="DAMAGE_ALL:1">raw fish</item>
-        <potion duration="99999" amplifier="4">jump</potion>
+        <potion duration="oo" amplifier="4">jump</potion>
     </kit>
 </kits>
 <disabledamage>
