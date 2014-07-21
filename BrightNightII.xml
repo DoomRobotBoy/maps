@@ -180,6 +180,14 @@
 				  <cuboid min="-2,107,-183" max="-4,108,-182"/>
 			</union>
 		</apply>
+		<cuboid name="red-base" min="43,15,-127" max="-29,92,-156" />
+		<apply block-place="deny-tnt-blue" message="`0You can't place tnt there, but you got haste.">
+			<region name="red-base" />
+		</apply>
+		<cuboid name="blue-base" min="-30,16,-89" max="37,88,-70" />
+		<apply block-place="deny-tnt-red" message="`0You can't place tnt there, but you got haste.">
+			<region name="red-base" />
+		</apply>
 	</regions>
   <portals>
       <!-- Blue team's portals to the map -->
@@ -243,7 +251,7 @@
 	</hunger>
   <!-- Monument -->
   <destroyables>
-  <destroyables name="Towers" completion="75%" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;smooth brick:2;smooth brick:1;smooth brick:0" show-progress="true">
+  <destroyables name="Towers" completion="80%" materials="stained clay:14;stained clay:11;cobblestone;wood;log;brick stairs;stained glass:15;smooth brick:2;smooth brick:1;smooth brick:0" show-progress="true">
     <destroyable owner="blue">
       <cuboid min="-26,15,-89" max="38,84,-71" />
     </destroyable>
