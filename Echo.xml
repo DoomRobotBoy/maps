@@ -72,12 +72,26 @@
         <!-- do not change the line under this!! -->
         <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
       </hill>
+      <hill name="South Control Point" capture-time="7.5s" points="1" show-progress="true">
+        <capture>
+          <cylinder base="328,11,34" radius="5" height="1" />
+        </capture>
+        <progress>
+          <cuboid min="324,11,38" max="332,11,30" />
+        </progress>
+        <!-- do not change the line under this!! -->
+        <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
+      </hill>
+      <hill name="North Control Point" capture-time="7.5s" points="1" show-progress="true">
+        <capture>
+          <cylinder base="328,11,-94" radius="5" height="1" />
+        </capture>
+        <progress>
+          <cuboid min="332,11,-98" max="324,11,-90" />
+        </progress>
+        <!-- do not change the line under this!! -->
+        <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
+      </hill>
     </hills>
   </king>
-
-  
-  
-  
-  
-  
 </map>
