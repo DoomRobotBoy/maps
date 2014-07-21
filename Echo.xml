@@ -1,2 +1,63 @@
 <?xml version="1.0"?>
 <map proto="1.3.3">
+  <name>Echo</name>
+  <version>1.0</version>
+  <objective>Control the 3 control points to be the first to get 500 points.</objective>
+  <authors>
+    <author>DoomRobotBoy</author>
+    <author contribution="Builder">gameslayer1999</author>
+    <author contribution="Builder">_DISTRACTION_</author>
+  </authors>
+  <contributors>
+    <contributor contribution="XML + Feedbacks">Guicotsch</contributor>
+    <contributor contribution="Map Dev Server Host">jollee999</contributor>
+    <contributor contribution="Feedbacks">rockymine</contributor>
+  </contributors>
+  <teams>
+    <team color="red" max="29" max-overfill="33" overhead-color="red">Red Team</team>
+    <team color="blue" max="29" max-overfill="33" overhead-color="blue">Blue Team</team>
+  </teams>
+  <kits>
+    <kit name="spawn" force="true">
+      <item slot="0">iron sword</item>
+      <item slot="1" enchantment="ARROW_INFINITE:1">bow</item>
+      <item slot="28">arrow</item>
+      <item slot="2" amount="32">golden carrot</item>
+      <potion duration="3" amplifier="5">heal</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+      <helmet>iron helmet</helmet>
+      <chestplate color="993333">leather chestplate</chestplate>
+    </kit>
+    <kit name="blue" parents="spawn">
+      <helmet>iron helmet</helmet>
+      <chestplate color="334CB2">leather chestplate</chestplate>
+    </kit>
+  </kits>
+  <toolrepair>
+    <tool>iron sword</tool>
+    <tool>bow</tool>
+    <tool>leather chestplate</tool>
+    <tool>iron helmet</tool>
+  </toolrepair>
+  <killreward>
+    <item amount="1">golden apple</item>
+  </killreward>
+  <spawns>
+    <spawn team="Red Team" kit="red" yaw="-90">
+      <cuboid min="406,25,-30" max="406,25,-30" />
+    </spawn>
+    <spawn team="Blue Team" kit="blue" yaw="90">
+      <cuboid min="250,25,-29" max="250,25,-29" />
+    </spawn>
+    <default yaw="90">
+      <cuboid min="330,76,-28" max="326,76,-32" />
+    </default>
+  </spawns>
+
+  
+  
+  
+  
+  
+</map>
