@@ -181,11 +181,11 @@
 			</union>
 		</apply>
 		<cuboid name="red-base" min="43,15,-127" max="-29,92,-156" />
-		<apply block-place="deny-tnt-blue" message="`0You can't place tnt there, but you got haste.">
+		<apply block-place="deny-tnt-blue" message="`0You can't place tnt there, but you can mine.">
 			<region name="red-base" />
 		</apply>
 		<cuboid name="blue-base" min="-30,16,-89" max="37,88,-70" />
-		<apply block-place="deny-tnt-red" message="`0You can't place tnt there, but you got haste.">
+		<apply block-place="deny-tnt-red" message="`0You can't place tnt there, but you can mine.">
 			<region name="red-base" />
 		</apply>
 	</regions>
