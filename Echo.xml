@@ -2,14 +2,14 @@
 <map proto="1.3.3">
   <name>Echo</name>
   <version>1.0</version>
-  <objective>Control the 3 control points to be the first to get 500 points.</objective>
+  <objective>Control the 3 control points to get 500 points before your enemy does it.</objective>
   <authors>
     <author>DoomRobotBoy</author>
     <author contribution="Builder">gameslayer1999</author>
     <author contribution="Builder">_DISTRACTION_</author>
+    <author contribution="XML + Feedbacks">Guicotsch</author>
   </authors>
   <contributors>
-    <contributor contribution="XML + Feedbacks">Guicotsch</contributor>
     <contributor contribution="Map Dev Server Host">jollee999</contributor>
     <contributor contribution="Feedbacks">rockymine</contributor>
   </contributors>
@@ -45,13 +45,13 @@
   </killreward>
   <spawns>
     <spawn team="Red Team" kit="red" yaw="-90">
-      <cuboid min="406,25,-30" max="406,25,-30" />
+      <cuboid min="406,25,-30" max="406,25,-30"/>
     </spawn>
     <spawn team="Blue Team" kit="blue" yaw="90">
-      <cuboid min="250,25,-29" max="250,25,-29" />
+      <cuboid min="250,25,-29" max="250,25,-29"/>
     </spawn>
     <default yaw="90">
-      <cuboid min="330,76,-28" max="326,76,-32" />
+      <cuboid min="330,76,-28" max="326,76,-32"/>
     </default>
   </spawns>
   <regions>
@@ -64,30 +64,30 @@
     <hills>
       <hill name="Middle Control Point" capture-time="7.5s" points="1" show-progress="true">
         <capture>
-          <cylinder base="328,20,-30" radius="3" height="1" />
+          <cylinder base="328,20,-30" radius="3" height="1"/>
         </capture>
         <progress>
-          <cuboid min="326,20,-28" max="330,20,-32" />
+          <cuboid min="326,20,-28" max="330,20,-32"/>
         </progress>
         <!-- do not change the line under this!! -->
         <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
       </hill>
       <hill name="South Control Point" capture-time="7.5s" points="1" show-progress="true">
         <capture>
-          <cylinder base="328,11,34" radius="5" height="1" />
+          <cylinder base="328,11,34" radius="5" height="1"/>
         </capture>
         <progress>
-          <cuboid min="324,11,38" max="332,11,30" />
+          <cuboid min="324,11,38" max="332,11,30"/>
         </progress>
         <!-- do not change the line under this!! -->
         <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
       </hill>
       <hill name="North Control Point" capture-time="7.5s" points="1" show-progress="true">
         <capture>
-          <cylinder base="328,11,-94" radius="5" height="1" />
+          <cylinder base="328,11,-94" radius="5" height="1"/>
         </capture>
         <progress>
-          <cuboid min="332,11,-98" max="324,11,-90" />
+          <cuboid min="332,11,-98" max="324,11,-90"/>
         </progress>
         <!-- do not change the line under this!! -->
         <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
