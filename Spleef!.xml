@@ -1,1 +1,28 @@
 <?xml version="1.0"?>
+<map proto="1.3.3">
+  <name>Spleef!</name>
+  <version>1.0</version>
+  <objective>Spleef the other teams to win.</objective>
+  <authors>
+    <author>Guicotsch</author>
+  </authors>
+  <rules>
+    <rule>You CAN spleef your mates, but they will probably hate you.</rule>
+  </rules>
+  <teams>
+    <team color="black" max="3" max-overfill="3">Black Team</team>
+    <team color="red" max="3" max-overfill="3">Red Team</team>
+    <team color="blue" max="3" max-overfill="3">Blue Team</team>
+    <team color="green" max="3" max-overfill="3">Green Team</team>
+    <team color="aqua" max="3" max-overfill="3">Cyan Team</team>
+    <team color="light_purple" max="3" max-overfill="3">Magenta Team</team>
+    <team color="dark_purple" max="3" max-overfill="3">Purple Team</team>
+    <team color="white" max="3" max-overfill="3">White Team</team>
+  </teams>
+  <kits>
+    <kit name="spleef" force="true" potion-particles="false">
+      <item slot="0" damage="-3000" enchantment="DIG_SPEED:4" name="Spleef Machine">diamond pickaxe</item>
+      <knockback-reduction>0.5</knockback-reduction>
+    </kit>
+  </kits>
+</map>
