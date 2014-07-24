@@ -22,6 +22,7 @@
   <kits>
     <kit name="spleef" force="true" potion-particles="false">
       <item slot="0" damage="-3000" enchantment="DIG_SPEED:4" name="Spleef Machine">diamond pickaxe</item>
+      <potion duration="oo" amplifier="50">damage resistance</potion>
       <knockback-reduction>0.5</knockback-reduction>
     </kit>
     <kit name="black" parents="spleef">
