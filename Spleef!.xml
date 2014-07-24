@@ -65,4 +65,68 @@
       </chestplate>
     </kit>
   </kits>
+  <disabledamage>
+    <damage>fall</damage>
+  </disabledamage>
+  <toolrepair>
+    <tool>leather chestplate</tool>
+  </toolrepair>
+  <!-- TNT -->
+  <instantignite>true</instantignite>
+  <yield>0</yield>
+  <power>3</power>
+  <fuse>2s</fuse>
+  
+  <killreward>
+    <item amount="1">tnt</item>
+  </killreward>
+  <!-- end of TNT -->
+
+  <spawns>
+  <!-- spanws there -->
+  <spawn team="Black Team" kit="black" yaw="0">
+    <cuboid min="-64,55,-36" max="-65,55,-37" />
+  </spawn>
+  <spawn team="Red Team" kit="red" yaw="45">
+    <cuboid min="-57,55,-21" max="-56,55,-22" />
+  </spawn>
+  <spawn team="Blue Team" yaw="90">
+    <cuboid min="-42,55,-14" max="-41,55,-13" />
+  </spawn>
+  <spawn team="Green Team" kit="green" yaw="135">
+    <cuboid min="-57,55,-5" max="-56,55,-6" />
+  </spawn>
+  <spawn team="Cyan Team" kit="cyan" yaw="-135">
+    <cuboid min="-72,55,-6" max="-73,55,-5" />
+  </spawn>
+  <spawn team="Magenta Team" kit="magenta" yaw="-45">
+    <cuboid min="-72,55,-22" max="-73,55,-21" />
+  </spawn>
+  <spawn team="Purple Team" kit="purple" yaw="-90">
+    <cuboid min="-88,55,-14" max="-87,55,-13" />
+  </spawn>
+  <spawn team="White Team" kit="white" yaw="-180">
+    <cuboid min="-64,55,10" max="-65,55,9" />
+  </spawn>
+  <!-- end of spawns there -->
+  </spawns>
+  <playable>
+    <cylinder name="main-area" base="-64,76,-13" height="-oo" radius="25" />
+  </playable>
+  <!-- renewables-->
+  <renewables>
+    <renewable rate="5" grow="false" particles="true" sound="true">
+      <region name="main-area" />
+      <renew>stained clay</renew>
+      <renew>quartz ore</renew>
+      <renew>glass</renew>
+    </renewable>
+  </renewables>
+  <!-- end of renewables-->
+  <blitz>
+    <time>7m</time>
+    <lives>2</lives>
+    <broadcastLives>true</broadcastLives>
+  </blitz>
+  <include src="blitz-global.xml"/>
 </map>
