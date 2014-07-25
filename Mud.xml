@@ -12,7 +12,9 @@
   </contributors>
   
   <teams>
-    <team color=""
+  <!-- needs to be filled -->
+    <team color="purple" max="" max-overfill="">Purple Team</team>
+    <team color="" max="" max-overfill=""></team>
   </teams>
   
   
