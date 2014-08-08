@@ -12,16 +12,13 @@
     <contributor contribution="Buildings, Feedbacks">entergame1994</contributor>
     <contributor contribution="Flag Specialist">DoomRobotBoy</contributor>
   </contributors>
-  
   <teams>
     <team color="purple" max="20" max-overfill="23">Purple Team</team>
     <team color="aqua" max="20" max-overfill="23">Cyan Team</team>
   </teams>
-  
   <rules>
     <rule>Be the first team to earn 400 points.</rule>
   </rules>
-  
   <kits>
     <kit name="spawn" force="true">
       <item slot="0">iron sword</item>
@@ -43,7 +40,6 @@
       <boots color="4C7F99">leather boots</boots>
     </kit>
   </kits>
-  
   <toolrepair>
     <tool>iron sword</tool>
     <tool>bow</tool>
@@ -51,13 +47,48 @@
   <itemremove>
     <item>arrow</item>
   </itemremove>
-  
   <spawns>
-    <spawn team="Purple Team" yaw="">
-      
+    <spawn team="Purple Team" yaw="90" kit="purple">
+      <cuboid min="73,17,-1" max="72,17,-1" />
     </spawn>
+    <spawn team="Cyan Team" yaw="-90" kit="cyan">
+      <cuboid min="-71,17,-1" max="-70,17,-1" />
+    </spawn>
+    <default yaw="180">
+      <cuboid min="0,50,0" max="2,50,-2" />
+    </default>
   </spawns>
-
-  
-  
+  <killreward>
+    <item amount="1">golden apple</item>
+  </killreward>
+  <king>
+    <hills>
+      <hill name="Hill" capture-time="15s" point="1" show-progress="true">
+        <capture><cuboid min="-7,12,6" max="9,12,-9" /></capture>
+        <progress><cuboid min="-7,12,6" max="9,12,-9" /></progress>
+        <captured><cuboid min="0,0,0" max="0,0,0"/></captured>
+      </hill>
+    </hills>
+  </king>
+  <score>
+    <limit>400</limit>
+    <king/>
+  </score>
+  <regions>
+    <cuboid name="purple-spawn" min="66,16,-8" max="74,20,6" />
+    <cuboid name="cyan-spawn" min="-64,16,7" max="-72,20,-8" />
+    <cylinder name="main-area" center="1,0,-1" radius="75" height="30" />
+  </regions>
+  <!-- spawn protection -->
+  <apply enter="only-purple" message="Do not try to enter, this is protected.">
+    <region name="purple-spawn" />
+  </apply>
+  <apply enter="only-cyan" message="Do not try to enter, this is protected.">
+    <region name="cyan-spawn" />
+  </apply>
+  <!-- end of spawn protection -->
+  <!-- non modifiable -->
+  <apply block="deny-all">
+    <region name="main-area" />
+  </apply>
 </map>
