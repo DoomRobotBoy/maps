@@ -86,7 +86,7 @@
   <filter>
     <kill-streak count="3"/>
   </filter>
-  <item name="`6Home Run" enchantment="durability:1;knockback:5">gold hoe</item>
+  <item name="`6Home Run" enchantment="durability:1;knockback:2">gold hoe</item>
 </killreward>
 <killreward>
   <filter>
