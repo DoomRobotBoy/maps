@@ -36,8 +36,8 @@
   </kit>
   <kit name="teams" parents="all" potion-particles="false">
     <item slot="0" damage="-3000" enchantment="damage all:10">iron sword</item>
-    <item slot="1" damage="-3000" enchantment="arrow damage:10">bow</item>
-    <item slot="2" amount="2">arrow</item>
+    <!-- bows, will maybe be added <item slot="1" damage="-3000" enchantment="arrow damage:10">bow</item> -->
+    <!-- this too <item slot="2" amount="2">arrow</item> -->
     <item slot="3" amount="64">vines</item>
     <potion duration="3" amplifier="100">damage resistance</potion>
     <potion duration="3" amplifier="100">heal</potion>
@@ -79,9 +79,6 @@
   <damage>fall</damage>
   <damage>suffocation</damage>
 </disabledamage>
-<killreward>
-  <item amount="1">arrow</item>
-</killreward>
 <killreward>
   <filter>
     <kill-streak count="3"/>
