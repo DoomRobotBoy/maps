@@ -53,7 +53,7 @@
 </kits> 
 <filters> 
     <filter name="only-vines"> 
-        <block>vines</block> 
+        <block>vine</block> 
     </filter> 
 </filters> 
 <regions> 
