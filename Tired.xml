@@ -25,7 +25,7 @@
         <cylinder base="9.5,25,-124.5" radius="1" height="0"/>  
     </spawn> 
     <spawn team="blue" kit="blue" yaw="-180"> 
-        <cylinder base="8.5,25,13,5" radius="1" height="0"/>  
+        <cylinder base="8.5,25,13.5" radius="1" height="0"/>  
     </spawn> 
 </spawns> 
 <kits> 
@@ -62,7 +62,7 @@
     </apply> 
 </regions> 
 <score> 
-    <time>6.40m</time> 
+    <time>6m40s</time> 
 </score> 
 <rage/> 
 <itemremove> 
