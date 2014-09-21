@@ -52,7 +52,7 @@
     </kit> 
 </kits> 
 <filters> 
-    <filter name="only-vines"> 
+    <filter name="only-vine"> 
         <block>vine</block> 
     </filter> 
 </filters> 
