@@ -73,7 +73,8 @@
     <item>glass bottle</item> 
     <item>leather helmet</item> 
     <item>leather chestplate</item> 
-    <item>vine</item> 
+    <item>vine</item>
+    <item>gold hoe</item>
 </itemremove> 
 <disabledamage> 
     <damage>fall</damage> 
