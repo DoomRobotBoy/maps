@@ -1,2 +1,24 @@
 <?xml version="1.0"?>
 <map proto="1.3.5">
+    <name>GerDo</name>
+    <version>1.0.0</version>
+    <objective>Destroy your opponents' monument.</objective>
+    <authors>
+        <author>DoomRobotBoy</author>
+        <author>Guicotsch</author>
+    </authors>
+    <contributors>
+        <contributor contribution="MapDev Server Host">Jollee999</contributor>
+    </contributors>
+    <teams>
+        <team id="red-team" color="DARK_RED" max="12" max-overfill="14">Red Team</team>
+        <team id="blue-team" color="BLUE" max="12" max-overfill="14">Blue Team</team>
+    </teams>
+    <kits>
+        <kit name="spawn" force="true">
+            <item slot="0">stone sword</item>
+            <item slot="1">bow</item>
+            <item slot="2">diamond pickaxe</item>
+        </kit>
+    </kits>
+</map>
