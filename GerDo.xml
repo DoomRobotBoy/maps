@@ -1,95 +1,105 @@
 <?xml version="1.0"?>
 <map proto="1.3.5">
-    <name>GerDo</name>
-    <version>1.0.0</version>
-    <objective>Destroy your opponents' monument.</objective>
-    <authors>
-        <author>DoomRobotBoy</author>
-        <author>Guicotsch</author>
-    </authors>
-    <contributors>
-        <contributor contribution="MapDev Server Host">Jollee999</contributor>
-    </contributors>
-    <teams>
-        <team id="red-team" color="DARK_RED" max="12" max-overfill="14">Red Team</team>
-        <team id="blue-team" color="BLUE" max="12" max-overfill="14">Blue Team</team>
-    </teams>
-    <kits>
-        <kit name="spawn" force="true">
-            <item slot="0">stone sword</item>
-            <item slot="1">bow</item>
-            <item slot="2">diamond pickaxe</item>
-            <item slot="3">iron axe</item>
-            <item slot="4" amount="32">log</item>
-            <item slot="8" amount="32">fish</item>
-            <chestplate enchantment="PROTECTION_PROJECTILE:1">chainmail</chestplate>
-            <potion duration="3" amplifier="6">damage resistance</potion> 
-        </kit>
-        <kit name="red" parents="spawn">
-            <helmet color="993333">leather helmet</helmet>
-            <leggings color="993333">leather leggings</leggings>
-            <boots color="993333">leather boots</boots>
-        </kit>
-        <kit name="blue" parents="spawn">
-            <helmet color="334CB2">leather helmet</helmet>
-            <leggings color="334CB2">leather leggings</leggings>
-            <boots color="334CB2">leather boots</boots>
-        </kit>
-    </kits>
-    <toolrepair>
-        <tool>sword sword</tool>
-        <tool>bow</tool>
-        <tool>diamond pickaxe</tool>
-        <tool>iron axe</tool>
-        <tool>leather helmet</tool>
-        <tool>leather leggings</tool>
-        <tool>leather boots</tool>
-        <tool>chainmail</tool>
-    </toolrepair>
-    <itemremove>
-        <item>arrow</item>
-        <item>seed</item>
-    </itemremove>
-    <modes>
-        <mode after="20m" material="coal block"/>
-    </modes>
-    <destroyables name="Balloon Monument" materials="obsidian" completion="100%">
+<name>GerDo</name>
+<version>1.0.0</version>
+<objective>Destroy your opponents' monument.</objective>
+<authors>
+    <author>DoomRobotBoy</author>
+    <author>Guicotsch</author>
+</authors>
+<contributors>
+    <contributor contribution="MapDev Server Host">Jollee999</contributor>
+</contributors>
+<teams>
+    <team id="red-team" color="DARK_RED" max="12" max-overfill="14">Red Team</team>
+    <team id="blue-team" color="BLUE" max="12" max-overfill="14">Blue Team</team>
+</teams>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="32">log</item>
+        <item slot="8" amount="32">fish</item>
+        <chestplate enchantment="PROTECTION_PROJECTILE:1">chainmail</chestplate>
+        <potion duration="3" amplifier="6">damage resistance</potion> 
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="993333">leather helmet</helmet>
+        <leggings color="993333">leather leggings</leggings>
+        <boots color="993333">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="334CB2">leather helmet</helmet>
+        <leggings color="334CB2">leather leggings</leggings>
+        <boots color="334CB2">leather boots</boots>
+    </kit>
+</kits>
+<toolrepair>
+    <tool>sword sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+    <tool>leather helmet</tool>
+    <tool>leather leggings</tool>
+    <tool>leather boots</tool>
+    <tool>chainmail</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>seed</item>
+</itemremove>
+<modes>
+    <mode after="20m" material="coal block"/>
+</modes>
+<destroyables name="Balloon Monument" materials="obsidian" completion="100%" mode-changes="true">
     <destroyable owner="red">
-    <cuboid min="145,12,-139" max="147,13,-137"/>
+        <cuboid min="145,12,-139" max="147,13,-137"/>
     </destroyable>
     <destroyable owner="blue">
-    <cuboid min="215,12,-1" max="213,13,-3"/>
+        <cuboid min="215,12,-1" max="213,13,-3"/>
     </destroyable>
-    </destroyables>
- 
-    <spawns>
-        <spawn team="red" kit="red" yaw="90">
-            <cylinder base="232.5,27,-81.5" radius="1"/>
-        </spawn>
-        <spawn team="blue" kit="blue" yaw="-90">
-            <cylinder base="128.5,27,-59.5" radius="1"/>
-        </spawn>
-        <default yaw="0">
-            <cylinder base="180.5,49,-70.5" radius="1"/>
-        </default>
-    </spawns>
- 
-    <regions>
-        <circle name="void-protect" center="180.5,-70.5" radius="80"/>
-            <apply block-place="deny-all">
-                <negative><region name="void-protect"/></negative>
-            </apply>
-    </regions>
-    <tnt>
-        <instantignite>on</instantignite>
-        <fuse>4s</fuse>
-    </tnt>
-    <maxbuildheight>34</maxbuildheight>
-    <difficulty>1</difficulty>
-    <broadcasts>
-        <tip after="30s" every="3m">The monument is at your left when spawning</tip>
-        <tip after="30s" every="3m">Spanish translation to add.</tip>
-    </broadcasts>
-
-
+</destroyables>
+<spawns>
+    <spawn team="red" kit="red" yaw="90">
+        <cylinder base="232.5,27,-81.5" radius="1"/>
+    </spawn>
+    <spawn team="blue" kit="blue" yaw="-90">
+        <cylinder base="128.5,27,-59.5" radius="1"/>
+    </spawn>
+    <default yaw="0">
+        <cylinder base="180.5,49,-70.5" radius="1"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-red">
+        <team>red</team>
+    </filter>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+</filters>
+<regions>
+    <circle name="void-protect" center="180.5,-70.5" radius="80"/>
+    <apply block-place="deny-all">
+        <negative><region name="void-protect"/></negative>
+    </apply>
+    <apply block="only-red">
+        <circle center="232.5,-81.5" radius="13"/>
+    </apply>
+    <apply block="only-blue">
+        <circle center="128.5,-59.5" radius="13"/>
+    </apply>
+</regions>
+<tnt>
+    <instantignite>on</instantignite>
+    <fuse>4s</fuse>
+</tnt>
+<maxbuildheight>34</maxbuildheight>
+<difficulty>1</difficulty>
+<broadcasts>
+    <tip after="30s" every="3m">The monument is at your left when spawning</tip>
+    <tip after="30s" every="3m">Spanish translation to add.</tip>
+</broadcasts>
 </map>
