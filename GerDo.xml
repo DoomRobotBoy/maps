@@ -100,6 +100,6 @@
 <difficulty>1</difficulty>
 <broadcasts>
     <tip after="30s" every="3m">The monument is at your left when spawning</tip>
-    <tip after="30s" every="3m">Spanish translation to add.</tip>
+    <tip after="30s" every="3m">El monumento esta a tu izquierda cuando spawneas</tip>
 </broadcasts>
 </map>
