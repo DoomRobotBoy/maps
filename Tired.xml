@@ -22,10 +22,12 @@
         <cylinder base="9.5,10,-55.5" radius="1" height="0"/>  
     </default> 
     <spawn team="red" kit="red" yaw="0"> 
-        <cylinder base="9.5,25,-124.5" radius="1" height="0"/>  
+        <cuboid min="-11,34,-123" max="-12,34,-125" />
+        <cuboid min="24,34,-125" max="25,34,-123" />
     </spawn> 
     <spawn team="blue" kit="blue" yaw="-180"> 
-        <cylinder base="8.5,25,13.5" radius="1" height="0"/>  
+        <cuboid min="-7,34,13" max="-8,34,11" />
+        <cuboid min="29,34,13" max="28,34,11" />
     </spawn> 
 </spawns> 
 <kits> 
