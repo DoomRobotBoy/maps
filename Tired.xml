@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 <map proto="1.3.3"> 
 <name>Tired</name> 
-<version>1.1.0</version> 
+<version>1.2.0</version> 
 <objective>Be the team with the most kills after 6.40 minutes.</objective> 
 <authors> 
     <author contribution="Block Design/Layout/Map Design">Guicotsch</author> 
@@ -14,8 +14,8 @@
     <rule>Fall and suffocation damage are disabled!</rule> 
 </rules> 
 <teams> 
-    <team name="red" color="red" max="12" max-overfill="15">Red Team</team> 
-    <team name="blue" color="blue" max="12" max-overfill="15">Blue Team</team> 
+    <team name="red" color="red" max="16" max-overfill="18">Red Team</team> 
+    <team name="blue" color="blue" max="16" max-overfill="18">Blue Team</team> 
 </teams> 
 <spawns> 
     <default kit="all" yaw="90"> 
@@ -81,16 +81,10 @@
 <disabledamage> 
     <damage>fall</damage> 
     <damage>suffocation</damage> 
-</disabledamage> 
+</disabledamage>
 <killreward> 
     <filter> 
         <kill-streak count="3"/> 
-    </filter> 
-    <item name="`6Home Run" enchantment="durability:1;knockback:8">gold hoe</item> 
-</killreward> 
-<killreward> 
-    <filter> 
-        <kill-streak count="4"/> 
     </filter> 
     <item name="`bSpeed Upgrade II" damage="8226" potions="speed:6000:1:true">potion</item> 
 </killreward> 
