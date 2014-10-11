@@ -102,4 +102,7 @@
     <tip after="30s" every="3m">The monument is at your left when spawning</tip>
     <tip after="30s" every="3m">El monumento esta a tu izquierda cuando spawneas</tip>
 </broadcasts>
+<killreward>
+    <item amount="1">EXP_BOTTLE</item>
+</killreward>
 </map>
