@@ -22,6 +22,7 @@
         <item slot="3">iron axe</item>
         <item slot="4" amount="32">log</item>
         <item slot="8" amount="32">fish</item>
+        <item slot="28" amount="32">arrow</item>
         <chestplate enchantment="PROTECTION_PROJECTILE:1">chainmail</chestplate>
         <potion duration="3" amplifier="6">damage resistance</potion> 
     </kit>
