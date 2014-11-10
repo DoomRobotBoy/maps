@@ -97,7 +97,6 @@
     <instantignite>on</instantignite>
     <fuse>4s</fuse>
 </tnt>
-<maxbuildheight>34</maxbuildheight>
 <broadcasts>
     <tip after="30s" every="3m">The `8`lmonument `ris at your left when spawning.</tip>
     <tip after="30s" every="3m">El `8`lmonumento `resta a tu izquierda cuando spawneas.</tip>
