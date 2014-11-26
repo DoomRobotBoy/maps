@@ -17,20 +17,19 @@
 </teams>
 <rage/>
 <blitz>
-<time>5m</time>
-<lives>2</lives>
-<title>Blitz: Rage</title>
+	<time>5m</time>
+	<lives>2</lives>
 </blitz>
 <spawns>
-<spawn team="red" kit="red" yaw="45">
-<cuboid min="43,9,-42" max="46,9,-45"/>
-</spawn>
-<spawn team="light green" kit="light green" yaw="-135">
-<cuboid min="-42,9,43" max="-45,9,46"/>
-</spawn>
-<default yaw="180">
-<cylinder base="-4,49,-73" radius="2" height="0"/>
-</default>
+	<spawn team="red" id="red-team" kit="red" yaw="90">
+		<cuboid min="721,27,-760" max="722,27,-763"/>
+	</spawn>
+	<spawn team="light green" id="green-team" kit="light green" yaw="-90">
+		<cuboid min="612,27,-763" max="611,27,-760"/>
+	</spawn>
+	<default yaw="180">
+		<cuboid min="665,68,-761" min="664,68,-760" />
+	</default>
 </spawns>
 <kits>
 	<kit name="spawn">
