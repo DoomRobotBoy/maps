@@ -28,7 +28,7 @@
 		<cuboid min="612,27,-763" max="611,27,-760"/>
 	</spawn>
 	<default yaw="180">
-		<cuboid min="665,68,-761" min="664,68,-760" />
+		<cuboid min="665,68,-761" min="664,68,-760"/>
 	</default>
 </spawns>
 <kits>
