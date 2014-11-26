@@ -21,10 +21,10 @@
 	<lives>2</lives>
 </blitz>
 <spawns>
-	<spawn team="red" id="red-team" kit="red" yaw="90">
+	<spawn team="Reindeers" kit="red" yaw="90">
 		<cuboid min="721,27,-760" max="722,27,-763"/>
 	</spawn>
-	<spawn team="light green" id="green-team" kit="light green" yaw="-90">
+	<spawn team="Elves" kit="light green" yaw="-90">
 		<cuboid min="612,27,-763" max="611,27,-760"/>
 	</spawn>
 	<default yaw="180">
@@ -40,22 +40,22 @@
 		<potion duration="5" amplifier="4">damage resistance</potion>
 	</kit>
 	<kit name="red" parents="spawn">
-		<helmet color="cd0000" locked="true">leather helmet</helmet>
-		<chestplate color="cd0000" locked="true">leather chestplate</chestplate>
-		<leggings color="cd0000" locked="true">leather leggings</leggings>
-		<boots color="cd0000" locked="true">leather boots</boots>
+		<helmet color="993333" locked="false">leather helmet</helmet>
+		<chestplate color="993333" locked="false">leather chestplate</chestplate>
+		<leggings color="993333" locked="false">leather leggings</leggings>
+		<boots color="993333" locked="false">leather boots</boots>
 	</kit>
 	<kit name="light green" parents="spawn">
-		<helmet color="7FCC19" locked="true">leather helmet</helmet>
-		<chestplate color="7FCC19" locked="true">leather chestplate</chestplate>
-		<leggings color="7FCC19" locked="true">leather leggings</leggings>
-		<boots color="7FCC19" locked="true">leather boots</boots>
+		<helmet color="7FCC19" locked="false">leather helmet</helmet>
+		<chestplate color="7FCC19" locked="false">leather chestplate</chestplate>
+		<leggings color="7FCC19" locked="false">leather leggings</leggings>
+		<boots color="7FCC19" locked="false">leather boots</boots>
 	</kit>
 </kits>
 <regions>
-<apply block="deny-all">
-<rectangle min="-oo,-oo" max="oo,oo"/>
-</apply>
+	<apply block="deny-all">
+		<rectangle min="-oo,-oo" max="oo,oo"/>
+	</apply>
 </regions>
 <timelock>on</timelock>
 <killreward>
