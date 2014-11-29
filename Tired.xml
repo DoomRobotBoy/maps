@@ -87,6 +87,9 @@
         <kill-streak count="3"/> 
     </filter> 
     <item name="`bSpeed Upgrade II" damage="8226" potions="speed:6000:1:true">potion</item> 
+</killreward>
+<killreward>
+    <item>arrow</item>
 </killreward> 
 <hunger> 
     <depletion>off</depletion> 
