@@ -21,10 +21,10 @@
         <item slot="2">diamond pickaxe</item>
         <item slot="3">iron axe</item>
         <item slot="4" amount="32">log</item>
-        <item slot="8" amount="32">fish</item>
+        <item slot="8" amount="32">cooked fish</item>
         <item slot="28" amount="32">arrow</item>
         <chestplate enchantment="PROTECTION_PROJECTILE:1" damge="-3000">chainmail chestplate</chestplate>
-        <potion duration="3" amplifier="6">damage resistance</potion> 
+        <potion duration="4" amplifier="6">damage resistance</potion> 
     </kit>
     <kit name="red" parents="spawn">
         <helmet color="993333" damge="-3000">leather helmet</helmet>
@@ -41,22 +41,24 @@
     <mode after="20m" material="coal block"/>
 </modes>
 <destroyables name="Balloon Monument" materials="obsidian" completion="100%" mode-changes="true">
-    <destroyable owner="red">
-        <cuboid min="145,12,-139" max="147,13,-137"/>
-    </destroyable>
-    <destroyable owner="blue">
-        <cuboid min="215,12,-1" max="213,13,-3"/>
-    </destroyable>
+    <destroyable owner="red" region="red-monument-balloon"/>
+    <destroyable owner="blue" region="blue-monument-balloon"/>
 </destroyables>
 <spawns>
     <spawn team="red" kit="red" yaw="90">
-        <cylinder base="232.5,27,-81.5" radius="1"/>
+        <regions>
+            <cylinder base="232.5,27,-81.5" radius="1"/>
+        </regions>
     </spawn>
     <spawn team="blue" kit="blue" yaw="-90">
-        <cylinder base="128.5,27,-59.5" radius="1"/>
+        <regions>
+            <cylinder base="128.5,27,-59.5" radius="1"/>
+        </regions>
     </spawn>
     <default yaw="0">
-        <cylinder base="180.5,49,-70.5" radius="1"/>
+        <regions>
+            <cylinder base="180.5,49,-70.5" radius="1"/>
+        </regions>
     </default>
 </spawns>
 <filters>
@@ -68,6 +70,8 @@
     </filter>
 </filters>
 <regions>
+    <cuboid name="red-monument-balloon" min="145,12,-139" max="147,13,-137"/>
+    <cuboid name="blue-monument-balloon" min="215,12,-1" max="213,13,-3"/>
     <circle name="void-protect" center="180.5,-70.5" radius="80"/>
     <apply block="only-red">
         <circle center="232.5,-81.5" radius="13"/>
